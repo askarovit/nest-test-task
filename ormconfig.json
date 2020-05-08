@@ -1,0 +1,19 @@
+{
+  "type": "mysql",
+  "host": "mysql-container-car",
+  "port": 3306,
+  "username": "root",
+  "password": "rootpw",
+  "database": "network_car_db",
+  "synchronize": true,
+  "logging": true,
+  "entities": [
+     "dist/entities/*.entity{.ts,.js}"
+  ],
+  "migrations": [
+    "dist/migration/*{.ts,.js}"
+  ],
+  "cli": {
+    "migrationsDir": "src/migration"
+  }
+}
