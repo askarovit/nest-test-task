@@ -1,4 +1,3 @@
-import { IManufacturerDTO } from '../manufacturer/manufacturer.interface';
 import { IOwnerDTO } from '../owner/owner.interface';
 
 export interface ICarDTO {
@@ -6,11 +5,9 @@ export interface ICarDTO {
   price: number;
   firstRegistrationDate: string | Date;
   manufacturer: string;
-  owners?: IOwnerDTO[] | string[];
+  owners?: IOwnerDTO[];
 }
 
-export interface ICarCreate {
-  price: number;
-  firstRegistrationDate: Date;
-  manufacturer: string;
+export interface IDeleteResponse {
+  deleted: boolean;
 }

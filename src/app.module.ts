@@ -1,8 +1,12 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { APP_FILTER, APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
 import { CarModule } from './modules/cars/car.module';
 import { ConfigModule } from '@nestjs/config';
 import { OwnerModule } from './modules/owner/owner.module';
+import { HttpErrorFilter } from './shared/http-error.filter';
+import { LoggingInterceptor } from './shared/logging.interceptor';
+import { ValidationPipe } from './shared/validation.pipe';
 
 @Module({
   imports: [
@@ -12,6 +16,19 @@ import { OwnerModule } from './modules/owner/owner.module';
     OwnerModule
   ],
   controllers: [],
-  providers: []
+  providers: [
+    {
+      provide: APP_FILTER,
+      useClass: HttpErrorFilter
+    },
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: LoggingInterceptor
+    },
+    {
+      provide: APP_PIPE,
+      useClass: ValidationPipe
+    },
+  ]
 })
 export class AppModule {}
