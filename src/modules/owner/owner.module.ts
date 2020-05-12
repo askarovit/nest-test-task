@@ -2,8 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { OwnerController } from './owner.controller';
 import { OwnerService } from './owner.service'
-import { Owner } from '../../entities/owner.entity';
-import { Car } from '../../entities/car.entity';
+import { Car, Owner } from '../../entities';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Owner, Car])],

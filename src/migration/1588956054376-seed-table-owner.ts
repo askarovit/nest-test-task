@@ -1,7 +1,6 @@
 import { getConnection, MigrationInterface, QueryRunner } from 'typeorm';
-import { Car } from '../entities/car.entity';
+import { Owner, Car } from '../entities';
 import { OwnerSeed } from './seed/owner.seed';
-import { Owner } from '../entities/owner.entity';
 
 export class seedTableOwner1588956054376 implements MigrationInterface {
     private randomInteger(min, max): number {
