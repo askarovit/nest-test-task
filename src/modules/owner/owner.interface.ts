@@ -3,18 +3,18 @@ import { ICarDTO } from '../cars/car.interface';
 export interface IOwnerDTO {
   id: string;
   name: string;
-  purchaseDate: Date;
+  purchaseDate: Date | string;
 }
 
 export interface IOwnerCreate {
   name: string;
-  purchaseDate?: Date;
+  purchaseDate?: Date | string;
   car?: string | ICarDTO;
 }
 
 export interface IOwnerUpdate {
   name?: string;
-  purchaseDate?: Date;
+  purchaseDate?: string;
 }
 
 export interface IOwnerDeleteResponse {

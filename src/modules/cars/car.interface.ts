@@ -1,5 +1,5 @@
 import { IOwnerDTO } from '../owner/owner.interface';
-
+import { IManufacturerModel } from '../manufacturer/manufacturer.model';
 export interface ICarDTO {
   id: string;
   price: number;
@@ -10,4 +10,14 @@ export interface ICarDTO {
 
 export interface IDeleteResponse {
   deleted: boolean;
+}
+
+export interface IManufacturerCar {
+  id: string;
+  manufacturer: IManufacturerModel | string;
+}
+
+export interface IResultTransaction {
+  error: string | null;
+  success: boolean;
 }

@@ -1,4 +1,4 @@
-import { Entity, Column, ManyToOne, JoinTable } from 'typeorm';
+import { Entity, Column, ManyToOne, JoinTable, JoinColumn } from 'typeorm';
 import { BaseEntity } from './BaseEntity';
 import { Car } from './car.entity';
 
@@ -12,5 +12,6 @@ export class Owner extends BaseEntity {
   purchaseDate: Date
 
   @ManyToOne(type => Car, car => car.owners)
+  @JoinColumn()
   car: string;
 }

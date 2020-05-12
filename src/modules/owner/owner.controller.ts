@@ -1,6 +1,6 @@
-import { Controller, Post, Get, Put, Delete, Body, Param } from '@nestjs/common';
+import { Controller, Get, Put, Delete, Body, Param } from '@nestjs/common';
 import { OwnerService } from './owner.service';
-import { IOwnerDTO, IOwnerCreate, IOwnerUpdate, IOwnerDeleteResponse } from './owner.interface';
+import { IOwnerDTO, IOwnerUpdate, IOwnerDeleteResponse } from './owner.interface';
 
 @Controller('owner')
 export class OwnerController {
@@ -11,11 +11,6 @@ export class OwnerController {
   findAllOwners(): Promise<Array<IOwnerDTO>> {
     return this.service.findAllOwners();
   }
-
-  // @Post()
-  // createOwner(@Body() data: IOwnerCreate): Promise<IOwnerDTO> {
-  //   return this.service.create(data);
-  // }
 
   @Get(':id')
   findOwnerById(@Param('id') id: string): Promise<IOwnerDTO> {
