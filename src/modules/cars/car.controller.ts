@@ -1,9 +1,9 @@
 import { Body, Controller, Get, Post, Put, UsePipes, Logger, Param, Delete } from '@nestjs/common';
+import { ValidationPipe } from '@shared/validation.pipe';
 import { Transaction, EntityManager, TransactionManager } from 'typeorm';
 import { CarService } from './car.service';
 import { ICarDTO, IDeleteResponse, IManufacturerCar, IResultTransaction } from './car.interface';
 import { CarDto } from './car.dto';
-import { ValidationPipe } from '../../shared/validation.pipe';
 
 @Controller('cars')
 export class CarController {

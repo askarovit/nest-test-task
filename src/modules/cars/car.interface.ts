@@ -1,5 +1,5 @@
-import { IOwnerDTO } from '../owner/owner.interface';
-import { IManufacturerModel } from '../manufacturer/manufacturer.model';
+import { IOwnerDTO } from '@modules/owner/owner.interface';
+import { IManufacturerModel } from '@modules/manufacturer/manufacturer.model';
 
 export interface ICarDTO {
   id: string;

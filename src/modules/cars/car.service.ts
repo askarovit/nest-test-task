@@ -2,9 +2,9 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { EntityManager, Repository, LessThan } from 'typeorm';
 import * as moment from 'moment';
+import { Car, Owner, Manufacturer } from '@entities';
 import { ICarDTO, IDeleteResponse, IManufacturerCar, IResultTransaction } from './car.interface';
 import { CarDto } from './car.dto';
-import { Car, Owner, Manufacturer } from '../../entities';
 
 @Injectable()
 export class CarService {

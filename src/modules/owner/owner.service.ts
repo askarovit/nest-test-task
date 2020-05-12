@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Owner } from '../../entities';
+import { Owner } from '@entities';
 import { IOwnerDTO, IOwnerUpdate, IOwnerDeleteResponse } from './owner.interface';
 
 @Injectable()

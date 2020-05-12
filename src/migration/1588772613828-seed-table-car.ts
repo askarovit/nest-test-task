@@ -1,5 +1,5 @@
 import { getConnection, MigrationInterface, QueryRunner } from 'typeorm';
-import { Car } from '../entities';
+import { Car } from '@entities';
 import { CarSeed } from './seed/car.seed';
 
 export class seedTableCar1588772613828 implements MigrationInterface {

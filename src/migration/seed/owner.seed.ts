@@ -1,4 +1,4 @@
-import  { IOwnerDTO } from '../../modules/owner/owner.interface';
+import  { IOwnerDTO } from '@modules/owner/owner.interface';
 
 export const OwnerSeed: Array<IOwnerDTO> = [
   { id: '11', name: 'Owner 1', purchaseDate: '2018-12-02' },

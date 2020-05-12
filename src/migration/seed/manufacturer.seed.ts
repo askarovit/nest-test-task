@@ -1,4 +1,4 @@
-import { IManufacturerDTO } from '../../modules/manufacturer/manufacturer.interface';
+import { IManufacturerDTO } from '@modules/manufacturer/manufacturer.interface';
 
 export const ManufacturerSeed: Array<IManufacturerDTO> = [
   { id: '1', name: 'Manufacturer 1', phone: '222-211-22', siret: 12345678900123 },

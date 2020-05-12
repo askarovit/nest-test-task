@@ -1,4 +1,4 @@
-import { ICarDTO } from '../cars/car.interface';
+import { ICarDTO } from '@modules/cars/car.interface';
 
 export interface IOwnerDTO {
   id: string;
