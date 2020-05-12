@@ -7,6 +7,7 @@ import { OwnerModule } from './modules/owner/owner.module';
 import { HttpErrorFilter } from './shared/http-error.filter';
 import { LoggingInterceptor } from './shared/logging.interceptor';
 import { ValidationPipe } from './shared/validation.pipe';
+import { ResponseInterceptor } from './shared/response.interceptor.js';
 
 @Module({
   imports: [
@@ -29,6 +30,10 @@ import { ValidationPipe } from './shared/validation.pipe';
       provide: APP_PIPE,
       useClass: ValidationPipe
     },
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: ResponseInterceptor
+    }
   ]
 })
 export class AppModule {}

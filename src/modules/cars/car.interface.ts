@@ -1,5 +1,6 @@
 import { IOwnerDTO } from '../owner/owner.interface';
 import { IManufacturerModel } from '../manufacturer/manufacturer.model';
+
 export interface ICarDTO {
   id: string;
   price: number;
