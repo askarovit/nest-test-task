@@ -7,7 +7,7 @@ import { OwnerModule } from '@modules/owner/owner.module';
 import { HttpErrorFilter } from '@shared/http-error.filter';
 import { LoggingInterceptor } from '@shared/logging.interceptor';
 import { ValidationPipe } from '@shared/validation.pipe';
-import { ResponseInterceptor } from '@shared/response.interceptor.js';
+import { ResponseInterceptor } from '@shared/response.interceptor';
 
 @Module({
   imports: [
